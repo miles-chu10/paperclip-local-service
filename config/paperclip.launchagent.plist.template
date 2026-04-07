@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>Label</key>
+    <string>{{LAUNCHD_LABEL}}</string>
+
+    <key>ProgramArguments</key>
+    <array>
+      <string>{{START_SCRIPT}}</string>
+    </array>
+
+    <key>WorkingDirectory</key>
+    <string>{{REPO_DIR}}</string>
+
+    <key>EnvironmentVariables</key>
+    <dict>
+      <key>PATH</key>
+      <string>{{PATH_VALUE}}</string>
+      <key>PAPERCLIP_HOME</key>
+      <string>{{PAPERCLIP_HOME}}</string>
+      <key>PAPERCLIP_INSTANCE_ID</key>
+      <string>{{PAPERCLIP_INSTANCE_ID}}</string>
+    </dict>
+
+    <key>RunAtLoad</key>
+    <true/>
+
+    <key>KeepAlive</key>
+    <true/>
+
+    <key>StandardOutPath</key>
+    <string>{{LOG_DIR}}/{{LAUNCHD_LABEL}}.out.log</string>
+
+    <key>StandardErrorPath</key>
+    <string>{{LOG_DIR}}/{{LAUNCHD_LABEL}}.err.log</string>
+  </dict>
+</plist>

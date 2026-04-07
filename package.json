@@ -1,0 +1,17 @@
+{
+  "name": "paperclip-local-service",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Reusable macOS LaunchAgent setup for running a local Paperclip instance as a background service",
+  "scripts": {
+    "install:launchagent": "bash scripts/install-launchagent.sh",
+    "render:launchagent": "bash scripts/install-launchagent.sh --render-only",
+    "start:instance": "bash scripts/start-paperclip-instance.sh"
+  },
+  "dependencies": {
+    "paperclipai": "2026.325.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
