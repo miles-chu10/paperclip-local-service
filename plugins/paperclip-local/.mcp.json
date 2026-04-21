@@ -1,0 +1,21 @@
+{
+  "mcpServers": {
+    "paperclip-local": {
+      "command": "bash",
+      "args": [
+        "${CLAUDE_PLUGIN_ROOT}/scripts/start-mcp.sh"
+      ],
+      "env": {
+        "PAPERCLIP_HOME": "${PAPERCLIP_HOME}",
+        "PAPERCLIP_INSTANCE_ID": "${PAPERCLIP_INSTANCE_ID}",
+        "PAPERCLIP_BIN": "${PAPERCLIP_BIN}",
+        "PAPERCLIP_CONFIG": "${PAPERCLIP_CONFIG}",
+        "PAPERCLIP_DATA_DIR": "${PAPERCLIP_DATA_DIR}",
+        "PAPERCLIP_CONTEXT": "${PAPERCLIP_CONTEXT}",
+        "PAPERCLIP_PROFILE": "${PAPERCLIP_PROFILE}",
+        "PAPERCLIP_API_BASE": "${PAPERCLIP_API_BASE}",
+        "PAPERCLIP_API_KEY": "${PAPERCLIP_API_KEY}"
+      }
+    }
+  }
+}

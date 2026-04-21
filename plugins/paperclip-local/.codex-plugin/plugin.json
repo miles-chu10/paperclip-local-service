@@ -1,0 +1,38 @@
+{
+  "name": "paperclip-local",
+  "version": "0.1.0",
+  "description": "Operate a local Paperclip instance through the bundled MCP server and operator skill.",
+  "author": {
+    "name": "Miles Chu",
+    "url": "https://github.com/miles-chu10"
+  },
+  "homepage": "https://github.com/miles-chu10/paperclip-local-service",
+  "repository": "https://github.com/miles-chu10/paperclip-local-service",
+  "license": "UNLICENSED",
+  "keywords": [
+    "paperclip",
+    "mcp",
+    "local-service",
+    "launchagent",
+    "operators"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Paperclip Local",
+    "shortDescription": "Operate a named local Paperclip instance.",
+    "longDescription": "Bundle the repo-local Paperclip MCP server with an operator skill for companies, issues, approvals, plugins, context, import/export, and diagnostics against one named local Paperclip instance.",
+    "developerName": "Miles Chu",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/miles-chu10/paperclip-local-service",
+    "defaultPrompt": [
+      "Check the status of my local Paperclip instance",
+      "List local Paperclip plugins and inspect one",
+      "Export a company package from this instance"
+    ]
+  }
+}

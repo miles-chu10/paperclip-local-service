@@ -37,7 +37,6 @@ PAPERCLIP_INSTANCE_ID="${PAPERCLIP_INSTANCE_ID:-default}"
 PAPERCLIP_BIN="${PAPERCLIP_BIN:-${REPO_DIR}/node_modules/.bin/paperclipai}"
 
 CONFIG_PATH="${PAPERCLIP_HOME}/instances/${PAPERCLIP_INSTANCE_ID}/config.json"
-INSTANCE_ENV="${PAPERCLIP_HOME}/instances/${PAPERCLIP_INSTANCE_ID}/.env"
 LOG_DIR="${PAPERCLIP_HOME}/instances/${PAPERCLIP_INSTANCE_ID}/logs"
 
 export PATH="${PATH:-/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin}"
@@ -55,11 +54,5 @@ fi
 mkdir -p "${LOG_DIR}"
 cd "${REPO_DIR}"
 
-if [[ -f "${INSTANCE_ENV}" ]]; then
-  set -a
-  # shellcheck disable=SC1090
-  source "${INSTANCE_ENV}"
-  set +a
-fi
-
+# Let `paperclipai run` load the instance-adjacent .env itself.
 exec "${PAPERCLIP_BIN}" run -c "${CONFIG_PATH}" -d "${PAPERCLIP_HOME}"

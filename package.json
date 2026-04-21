@@ -4,12 +4,17 @@
   "version": "0.1.0",
   "description": "Reusable macOS LaunchAgent setup for running a local Paperclip instance as a background service",
   "scripts": {
+    "check:mcp": "node src/smoke-test.mjs",
     "install:launchagent": "bash scripts/install-launchagent.sh",
+    "mcp:server": "node src/paperclip-mcp.mjs",
     "render:launchagent": "bash scripts/install-launchagent.sh --render-only",
     "start:instance": "bash scripts/start-paperclip-instance.sh"
   },
   "dependencies": {
-    "paperclipai": "2026.325.0"
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "dotenv": "^17.4.1",
+    "paperclipai": "2026.325.0",
+    "zod": "^3.25.76"
   },
   "engines": {
     "node": ">=20"

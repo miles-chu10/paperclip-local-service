@@ -1,0 +1,4 @@
+interface:
+  display_name: "Paperclip Local Operator"
+  short_description: "Operate a local Paperclip instance"
+  default_prompt: "Use $paperclip-local-operator to inspect my local Paperclip companies, issues, approvals, and plugins."

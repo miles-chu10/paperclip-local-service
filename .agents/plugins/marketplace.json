@@ -1,0 +1,20 @@
+{
+  "name": "paperclip-local-service",
+  "interface": {
+    "displayName": "Paperclip Local Service"
+  },
+  "plugins": [
+    {
+      "name": "paperclip-local",
+      "source": {
+        "source": "local",
+        "path": "./plugins/paperclip-local"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
